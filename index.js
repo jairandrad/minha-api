@@ -19,9 +19,8 @@ app.use(express.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/:id', (req, res) => {
-    const item = findItem(req.params.id);
-    return res.json(item);
+app.get('/', (req, res) => {
+    return res.json(data);
 });
 
 app.post('/', (req, res) => {
