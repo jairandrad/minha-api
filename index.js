@@ -10,13 +10,17 @@ const data = [
     { id: 5, name: 'Jason', age: 31, company: 'Accumsan Interdum Associates' },
   ];
 
+  const findItem = id => {
+      return data.find(item => item.id == id);
+  }
+
+
 app.use(express.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/:id', (req, res) => {
-    const id = req.params.id;
-    const item = data.find(item => item.id == id);
+    const item = findItem(req.params.id);
     return res.json(item);
 });
 
@@ -27,8 +31,7 @@ app.post('/', (req, res) => {
 });
 
 app.put('/:id', (req, res) => {
-    const id = req.params.id;
-    const item = data.find(item => item.id == id);
+    const item = findItem(req.params.id);
     return res.json(item);
 });
 
