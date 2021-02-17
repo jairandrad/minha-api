@@ -31,8 +31,16 @@ app.post('/', (req, res) => {
 });
 
 app.put('/:id', (req, res) => {
-    const item = findItem(req.params.id);
+    const name = req.body.name;
+    let item = findItem(req.params.id);
+    item = { item, name: name };
     return res.json(item);
+});
+
+app.delete('/:id', (req, res) => {
+    const item = findItem(req.params.id);
+    // deletar o item
+    return res.json({});
 });
 
 
