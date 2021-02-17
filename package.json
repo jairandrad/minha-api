@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1"
@@ -12,5 +11,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jairandrad/minha-api-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jairandrad/minha-api-nodejs/issues"
+  },
+  "homepage": "https://github.com/jairandrad/minha-api-nodejs#readme",
+  "description": ""
 }
