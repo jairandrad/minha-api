@@ -6,4 +6,10 @@ app.get('/', (req, res) => {
     const result = {name: 'jair', email: 'jair.andrad.filho@gmail.com'};
     return res.json(result);
 });
+
+app.post('/', (req, res) => {
+    return res.json([]);
+});
+
+
 app.listen(port, () => console.log(`Listening on port ${port}!`));
